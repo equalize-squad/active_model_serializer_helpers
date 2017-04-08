@@ -8,3 +8,11 @@ dependencies:
 test:
   override:
     - RAILS_ENV=test bundle exec rspec -r rspec_junit_formatter --format progress --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
+deployment:
+  release:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    owner: roalcantara
+    commands:
+      - echo ":rubygems_api_key: $RUBYGEMS_API_KEY" > ~/.gem/credentials
+      - gem build active_model_serializer_helpers.gemspec
+      - gem push *.gem
