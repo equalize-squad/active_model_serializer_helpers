@@ -19,9 +19,10 @@ end
 namespace :deploy do
   desc 'Merges the develop branch into master'
   task :merge do
+    sh 'git fetch'
     sh 'git checkout master'
     sh 'git pull'
-    sh 'git merge develop'
+    sh 'git merge origin/develop'
     sh 'git push'
   end
 
@@ -37,6 +38,7 @@ namespace :deploy do
         draft: false,
         prerelease: false
       )
+      puts "#{args.version} released in the wild! YAY!"
     rescue => e
       puts e.message
     end
