@@ -1,3 +1,7 @@
+general:
+  branches:
+    ignore:
+      - master
 dependencies:
   pre:
     - gem install bundler --pre
@@ -7,6 +11,7 @@ test:
 deployment:
   release:
     tag: /v[0-9]+(\.[0-9]+)*/
+    owner: roalcantara
     commands:
       - echo ":rubygems_api_key: $RUBYGEMS_API_KEY" > ~/.gem/credentials
       - gem build active_model_serializer_helpers.gemspec
