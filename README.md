@@ -2,6 +2,8 @@
 
 Some Active Model Serializer RSpec Helpers and Matchers
 
+[![CircleCI](https://circleci.com/gh/roalcantara/active_model_serializer_helpers/tree/master.svg?style=shield)](https://circleci.com/gh/roalcantara/active_model_serializer_helpers/tree/master)
+
 ## Installation
 
 Add this line to your application's Gemfile:
