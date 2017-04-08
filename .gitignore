@@ -10,3 +10,6 @@
 
 # rspec failure tracking
 .rspec_status
+
+# generated gem files
+*.gem
