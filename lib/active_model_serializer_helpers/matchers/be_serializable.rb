@@ -1,4 +1,4 @@
-require "rspec/core"
+require 'rspec/core'
 
 RSpec::Matchers.define :be_serializable do
   match do |actual|
