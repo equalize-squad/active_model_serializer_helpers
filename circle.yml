@@ -1,3 +1,7 @@
+general:
+  branches:
+    ignore:
+      - master
 dependencies:
   pre:
     - gem install bundler --pre
