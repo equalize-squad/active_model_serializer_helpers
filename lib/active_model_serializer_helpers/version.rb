@@ -1,3 +1,3 @@
 module ActiveModelSerializerHelpers
-  VERSION = '0.3.0-alpha'.freeze
+  VERSION = '0.4.0-alpha'.freeze
 end
