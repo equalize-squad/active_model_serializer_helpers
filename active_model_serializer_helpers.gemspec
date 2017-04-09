@@ -2,7 +2,6 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'active_model_serializer_helpers/version'
-require 'active_model_serializer_helpers/repo'
 
 Gem::Specification.new do |spec|
   spec.name          = 'active_model_serializer_helpers'
@@ -12,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Active Model Serializer Helpers'
   spec.description   = 'Active Model Serializer RSpec Helpers and Matchers'
-  spec.homepage      = ActiveModelSerializerHelpers::REPOSITORY
+  spec.homepage      = 'https://github.com/roalcantara/active_model_serializer_helpers'
   spec.license       = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
@@ -25,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.14'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec_junit_formatter', '~> 0.2.3'
+  spec.add_development_dependency 'github-rake-release', '~> 0.1.1.pre.alpha'
+
   spec.add_dependency 'rspec', '~> 3.0'
-  spec.add_dependency 'octokit', '~> 4.7'
 end
